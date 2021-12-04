@@ -123,7 +123,7 @@ public class Main {
                 if (value < node.left.value) {   //если число меньше чем левый потомок
                     rotateRight(node);           //повернуть вправо
                 } else {
-                    rotateLeftThenRight(node);   //и наоборот
+                    rotateLeftThenRight(node);   //или же повернуть налево потом направо чтобы первый элемент был правый второй левый
                 }
             }
         } else if (value > node.value) {     //если значение больше чем другая  т,е предыдущие
@@ -137,8 +137,7 @@ public class Main {
                 if (value > node.right.value)       //если число больше чем значение правого поддерева
                     rotateLeft(node);              //повернуть налево
                 else {
-                    rotateRightThenLeft(node);    //или же повернуть направо потом налево т,е все останется на своих местах
-                }
+                    rotateRightThenLeft(node);    //или же повернуть направо потом налево чтобы первый элемент был правый второй левый                 }
             }
         }
 
